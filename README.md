@@ -1,2 +1,2 @@
-# LMSC-261-ProblemSets
+# ProblemSets
  Problem Sets!
