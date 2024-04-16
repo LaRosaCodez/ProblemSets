@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="styles2.css" rel="stylesheet">
+        <title>Bio</title>
+        <script>
+            function changeBackgroundColor() {
+                var color = document.getElementById("colorSelector").value;
+                document.body.style.backgroundColor = color;
+            }
+        </script>
+    </head>
+    <body>
+        <b>
+            <h1>DOGTALK</h1>
+        </b>
+        <h2>BIO-</h2>
+        <p>
+            <h3>DOGTALK is a band with influences ranging from 80s synth pop to Japanese jazz fusion, glued together by the desire to experiment with the wildly innovative yet fun and danceable music of the 70s-80s, all while maintaining an inviting and interactive atmosphere with the audience. Spearheaded by bandleader Vince LaRosa, the band started off as an unnamed busking group composed of Berklee students/friends looking to have some fun on the weekends, free from the cut-throat environment that surrounds the college. Slowly evolving into the form it assumes today, playing sets with a greater focus on crafting a cohesive experience, the group's DNA remains a genre-free, improvisation-based jam-band with a single goal in mind; playing music that leaves you with a smile on your face.</h3>
+        </p>
+        <h4>
+            With Jack Rooks on the bass, Devan Travers on the guitar, Quinn Domena on the drums, Ari Heasley on the keys and Vincent LaRosa on the trombone/synth, the band seeks to deliver a sound that is fresh and unique- but most of all, impossible not to dance to.
+            <br>
+            <img src="pic4.jpeg" alt="dev pic" width="600" height="1000">
+        <h3>Above is Jack Rooks</h3>
+            <br>
+            <a href="index.html">Back to homepage</a>
+            <br>
+            <a href="pics.html">Pics</a>
+            <br>
+            <a href="performances.html">Upcoming Performances</a>
+        </h4>
+        <select id="colorSelector" onchange="changeBackgroundColor()">
+            <option value="white">White</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+        </select>
+    </body>
+    </html>

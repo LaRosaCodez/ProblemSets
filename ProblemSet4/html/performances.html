@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="styles2.css" rel="stylesheet">
+        <title>Upcoming Performances</title>
+        <script>
+            function changeBackgroundColor() {
+                var color = document.getElementById("colorSelector").value;
+                document.body.style.backgroundColor = color;
+            }
+        </script>
+<body>
+    <b><h1>DOGTALK</h1></b>
+    <h2>Upcoming Performances and Important Dates</h2>
+    <p>DOGTALK will be playing from 3:00-3:30pm at the Earth Day Fundraiser</p>
+    <img src="pic10.JPG" alt="Earth Day Poster" width="500" height="1200">
+    <h3>
+        <p>DOGTALK also plays every Sunday from 1-5 at Boconcept off Newbury St.</p>
+    </h3>
+    <h4>
+        <a href="index.html">Back to homepage</a>
+        <br>
+        <a href="pics.html">Pics</a>
+        <br>
+        <a href="bio.html">Bio</a>
+    </h4>
+    <select id="colorSelector" onchange="changeBackgroundColor()">
+        <option value="white">White</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+    </select>
+</body>
+</html>

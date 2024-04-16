@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet">
+    <title>DOGTALK BAND PAGE</title>
+    <script>
+        function changeBackgroundColor() {
+            var color = document.getElementById("colorSelector").value;
+            document.body.style.backgroundColor = color;
+        }
+
+        function changeImage() {
+            var images = ["img1.jpg", "img2.jpg", "img3.jpg"]; 
+            var randomIndex = Math.floor(Math.random() * images.length); 
+            var selectedImage = images[randomIndex]; 
+            document.querySelector("#randomImage").src = selectedImage; 
+        }
+
+        window.onload = function() {
+            changeBackgroundColor(); 
+            changeImage(); 
+        };
+
+        function displayFavoriteText() {
+            var favoriteText = "i love you";
+            document.getElementById("quoteText").textContent = favoriteText;
+        }
+
+        function startTimer() {
+            var countdown = document.getElementById("countdown").value;
+            var count = parseInt(countdown); // Parse the input to an integer
+            var countdownDisplay = document.getElementById("countdownDisplay");
+            countdownDisplay.textContent = count;
+
+            var timer = setInterval(function() {
+                count--; // Decrement count
+                countdownDisplay.textContent = count;
+
+                if (count === 0) {
+                    clearInterval(timer);
+                    alert("The Countdown is Over Now!");
+                }
+            }, 1000);
+        }
+    </script>
+</head>
+
+</head>
+<body>
+    <b><h1>DOGTALK</h1></b>
+    <h2>
+        <p>DOGTALK is a Boston-based band of 5 Berklee students that plays genres ranging from Japanese Jazz Fusion to 80's Synth Pop and more!</p>
+        <img id="randomImage" src="" alt="Random Image" width="500" height="366">
+    </h2>
+    <h3>
+        <p>Meet the members:</p>
+    </h3>
+    <table>
+        <tr>
+            <td>Vincent LaRosa</td>
+            <td>Trombone/Synth.</td>
+        </tr>
+        <tr>
+            <td>Jack Rooks</td>
+            <td>Bass</td>
+        </tr>
+        <tr>
+            <td>Ari Heasely</td>
+            <td>Keys</td>
+        </tr>
+        <tr>
+            <td>Devan Travers</td>
+            <td>Guitar</td> 
+        </tr>
+        <tr>
+            <td>Quinn Domena</td>
+            <td>Drums</td>
+        </tr>
+    </table>
+    <div>
+        <div>
+            <h4>
+                Click <a href="bio.html">here</a> for our Bio
+                <br>
+                Click <a href="pics.html">here</a> for Pics
+                <br>
+                Click <a href="performances.html">here</a> for Upcoming Performances
+            </h4>
+        </div>
+    </div>
+    
+    <!-- Background Color Selector -->
+    <label for="colorSelector">Select Background Color:</label>
+    <select id="colorSelector" onchange="changeBackgroundColor()">
+        <option value="white">White</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+    </select>
+    
+    <!-- Countdown -->
+    <input type="text" id="countdown" placeholder="Enter a number">
+    <button onclick="startTimer()">Start Countdown</button>
+    <p id="countdownDisplay"></p>
+
+    <!-- Super Secret Message -->
+    <button onclick="displayFavoriteText()">Super Secret Message!!</button>
+    <p id="quoteText"></p> 
+</body>
+</html>
